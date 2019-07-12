@@ -168,12 +168,11 @@
 
 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
 <p><strong>NB! This needs to be in <code>configuration.yaml</code>, <em>not</em> in a "package".</strong></p>
-<hr />
-<p>HACS uses the GitHub API to gather information.<br />
-Without a valid token, HACS will <strong>not</strong> start.  </p>
+<p>HACS uses the GitHub API to gather information.  Without authentication the usage of the API is limited to 60 calls per hour.
+The token generated below will only have read-only access to public information.</p>
 <h2 id="example-configuration">Example configuration<a class="headerlink" href="#example-configuration" title="Permanent link">&para;</a></h2>
 <pre><code class="yaml">hacs:
-  token: d73jds8f73jkr9d8sufv2br8sd9fy92nr9f80u23r97fhse (Don't copy+paste this token, create your own)
+  token: d73jds8f73jkr9d8sufv2br8sd9fy92nr9f80u23r97fhse
 </code></pre>
 
 <table>
@@ -191,6 +190,18 @@ Without a valid token, HACS will <strong>not</strong> start.  </p>
 <td>False</td>
 <td></td>
 <td>A Github Personal Access Token</td>
+</tr>
+<tr>
+<td><code>sidepanel_title</code></td>
+<td>True</td>
+<td>Community</td>
+<td>The name used for the sidepanel link.</td>
+</tr>
+<tr>
+<td><code>sidepanel_icon</code></td>
+<td>True</td>
+<td>"mdi:alpha-c-box"</td>
+<td>The icon used for the sidepanel link.</td>
 </tr>
 <tr>
 <td><code>appdaemon</code></td>
@@ -215,7 +226,6 @@ Without a valid token, HACS will <strong>not</strong> start.  </p>
 <hr />
 <p>After adding it to the configuration you need to restart Home Assistant.</p>
 <h2 id="github-personal-access-token">Github Personal Access Token<a class="headerlink" href="#github-personal-access-token" title="Permanent link">&para;</a></h2>
-<p>The token generated below will only have read-only access to public information.</p>
 <p><em>You need to generate an Access Token to your account before you start using this.</em></p>
 <h3 id="step-1-open-browser">Step 1 - Open browser<a class="headerlink" href="#step-1-open-browser" title="Permanent link">&para;</a></h3>
 <p><em>You are probably looking at this in a browser, so we can probably check this off.</em></p>
